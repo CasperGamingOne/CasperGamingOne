@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @CasperGamingOne
 - 👀 I’m interested in new games
-- 🌱 I’m soon going to learn Zig
-- 💞️ I’m looking to develop a lot of good stuff
+- 🌱 I’m learning C#
+- 💞️ I’m looking to develop a lot of great stuff
 
 <!---
 CasperGamingOne/CasperGamingOne is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
