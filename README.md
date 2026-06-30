@@ -2,7 +2,7 @@
 
 - [x] 👋 Hi, I’m @CasperGamingOne
 - 👀 I’m interested in new games
-- [ ] 🌱 I’m learning C#
+- [ ] 🌱 I’m learning ![C# Logo](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white)
 - [ ] 💞️ I’m looking to develop a lot of great stuff
 
 <!---
