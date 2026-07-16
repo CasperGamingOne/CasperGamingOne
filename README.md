@@ -35,6 +35,7 @@
 ## 🗺️ Current Quests
 
 - [ ] 🌱 **Main Quest:** Leveling up my <img src="https://img.shields.io/badge/C%23-8A2BE2?style=flat-square&logo=csharp&logoColor=white" /> skills.
+- [ ] ⭐ **Special Task:** Creating my own desktop environment based on DWM + Picom + Quickshell.
 - [ ] 🛠️ **Side Quest:** Crafting and configuring custom Linux setups and scripts.
 
 <br>
