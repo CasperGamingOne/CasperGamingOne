@@ -11,7 +11,9 @@
 ## 📜 Player Profile
 
 👋 **Greeting:** Hi, I’m @CasperGamingOne
+
 👀 **Interests:** Exploring new games and tinkering with systems.
+
 💞️ **Guild:** Looking to develop a lot of great stuff!
 
 <br>
