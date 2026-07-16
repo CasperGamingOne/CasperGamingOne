@@ -48,7 +48,6 @@
 ## 📊 Player Stats
 
 <div align="center">
-  <img src="https://metrics.lecoq.io/CasperGamingOne?base.header=false&base.activity=false&base.community=false&base.repositories=false&base.metadata=false&isocalendar=true&isocalendar.duration=half-year&config.timezone=Europe%2FLondon" alt="CasperGamingOne's GitHub Stats" />
   <br/>
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=CasperGamingOne&background=1a0b2e&ring=c084fc&fire=a855f7&currStreakNum=d8b4fe&currStreakLabel=a855f7&sideNums=d8b4fe&sideLabels=a855f7&dates=d8b4fe&hide_border=true" alt="CasperGamingOne's Streak" />
