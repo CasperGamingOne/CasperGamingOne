@@ -3,8 +3,6 @@
 </div>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Alien%20Monster.png" alt="Alien Monster" width="50" height="50" />
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Video%20Game.png" alt="Video Game" width="50" height="50" />
   <h1>👾 Player 1: CasperGamingOne has entered the game! 👾</h1>
 </div>
 
@@ -27,6 +25,7 @@
   <img src="https://img.shields.io/badge/Fedora-51A2DA?style=for-the-badge&logo=fedora&logoColor=white" />
   <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/DWM-1177AA?style=for-the-badge&logo=c&logoColor=white" />
 </div>
 
 <br>
@@ -40,22 +39,22 @@
 
 ## 🎮 Currently Playing
 
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Water%20Pistol.png" alt="Water Pistol" width="25" height="25" /> **CS2** (Counter-Strike 2)
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People%20with%20professions/Mage.png" alt="Mage" width="25" height="25" /> **DOTA 2**
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Evergreen%20Tree.png" alt="Evergreen Tree" width="25" height="25" /> **Road To Vostok**
+- 🔫 **CS2** (Counter-Strike 2)
+- 🧙‍♂️ **DOTA 2**
+- 🌲 **Road To Vostok**
 
 <br>
 
 ## 📊 Player Stats
 
 <div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=CasperGamingOne&show_icons=true&bg_color=1a0b2e&title_color=a855f7&text_color=d8b4fe&icon_color=c084fc&hide_border=true" alt="CasperGamingOne's GitHub Stats" />
+  <img src="https://metrics.lecoq.io/CasperGamingOne?base.header=false&base.activity=false&base.community=false&base.repositories=false&base.metadata=false&isocalendar=true&isocalendar.duration=half-year&config.timezone=Europe%2FLondon" alt="CasperGamingOne's GitHub Stats" />
   <br/>
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=CasperGamingOne&background=1a0b2e&ring=c084fc&fire=a855f7&currStreakNum=d8b4fe&currStreakLabel=a855f7&sideNums=d8b4fe&sideLabels=a855f7&dates=d8b4fe&hide_border=true" alt="CasperGamingOne's Streak" />
   <br/>
   <br/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=CasperGamingOne&layout=compact&bg_color=1a0b2e&title_color=a855f7&text_color=d8b4fe&icon_color=c084fc&hide_border=true" alt="Top Languages" />
+  <img src="https://metrics.lecoq.io/CasperGamingOne?languages=true&languages.limit=8&languages.colors=github&languages.aliases=&languages.recent.load=300&languages.recent.days=14" alt="Top Languages" />
 </div>
 
 <br>
