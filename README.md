@@ -11,9 +11,7 @@
 ## 📜 Player Profile
 
 👋 **Greeting:** Hi, I’m @CasperGamingOne
-
 👀 **Interests:** Exploring new games and tinkering with systems.
-
 💞️ **Guild:** Looking to develop a lot of great stuff!
 
 <br>
@@ -21,13 +19,15 @@
 ## 🎒 Inventory (Tech Stack)
 
 <div align="left">
-  <img src="https://img.shields.io/badge/C%23-8A2BE2?style=for-the-badge&logo=csharp&logoColor=white" />
   <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-  <img src="https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=NixOS&logoColor=white" />
+  <img src="https://img.shields.io/badge/openSUSE-73BA25?style=for-the-badge&logo=opensuse&logoColor=white" />
   <img src="https://img.shields.io/badge/Fedora-51A2DA?style=for-the-badge&logo=fedora&logoColor=white" />
-  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
   <img src="https://img.shields.io/badge/Bash-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white" />
+  <img src="https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=NixOS&logoColor=white" />
   <img src="https://img.shields.io/badge/DWM-1177AA?style=for-the-badge&logo=c&logoColor=white" />
+  <img src="https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-8A2BE2?style=for-the-badge&logo=csharp&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
 </div>
 
 <br>
@@ -50,6 +50,7 @@
 ## 📊 Player Stats
 
 <div align="center">
+  <img src="https://metrics.lecoq.io/CasperGamingOne?base.header=false&base.activity=false&base.community=false&base.repositories=false&base.metadata=false&isocalendar=true&isocalendar.duration=half-year&config.timezone=Europe%2FLondon" alt="CasperGamingOne's GitHub Stats" />
   <br/>
   <br/>
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=CasperGamingOne&background=1a0b2e&ring=c084fc&fire=a855f7&currStreakNum=d8b4fe&currStreakLabel=a855f7&sideNums=d8b4fe&sideLabels=a855f7&dates=d8b4fe&hide_border=true" alt="CasperGamingOne's Streak" />
