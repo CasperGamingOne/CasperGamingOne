@@ -28,14 +28,14 @@
   <img src="https://img.shields.io/badge/NixOS-5277C3?style=for-the-badge&logo=NixOS&logoColor=white" />
   <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" />
   <img src="https://img.shields.io/badge/C%23-8A2BE2?style=for-the-badge&logo=csharp&logoColor=white" />
-  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23%20%2F%20.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
 </div>
 
 <br>
 
 ## 🗺️ Current Quests
 
-- [ ] 🌱 **Main Quest:** Leveling up my <img src="https://img.shields.io/badge/C%23-8A2BE2?style=flat-square&logo=csharp&logoColor=white" /> skills.
+- [ ] 🌱 **Main Quest:** Leveling up my <img src="https://img.shields.io/badge/C%23%20%2F%20.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" /> skills.
 - [ ] ⭐ **Special Task:** Creating my own desktop environment based on DWM + Picom + Quickshell.
 - [ ] 🛠️ **Side Quest:** Crafting and configuring custom Linux setups and scripts.
 
