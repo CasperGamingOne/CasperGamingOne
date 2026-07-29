@@ -56,7 +56,7 @@
   <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=CasperGamingOne&layout=compact&bg_color=1a0b2e&title_color=a855f7&text_color=d8b4fe&icon_color=c084fc&hide_border=true" alt="Top Languages" />
   <br/>
   <br/>
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=CasperGamingOne&background=1a0b2e&ring=c084fc&fire=a855f7&currStreakNum=d8b4fe&currStreakLabel=a855f7&sideNums=d8b4fe&sideLabels=a855f7&dates=d8b4fe&hide_border=true" alt="CasperGamingOne's Streak" />
+  <img src="https://streak-stats.demolab.com/?user=CasperGamingOne&background=1a0b2e&ring=c084fc&fire=a855f7&currStreakNum=d8b4fe&currStreakLabel=a855f7&sideNums=d8b4fe&sideLabels=a855f7&dates=d8b4fe&hide_border=true" alt="CasperGamingOne's Streak" />
   <br/>
   <br/>
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=CasperGamingOne&show_icons=true&bg_color=1a0b2e&title_color=a855f7&text_color=d8b4fe&icon_color=c084fc&hide_border=true" alt="Commit Calendar" />
