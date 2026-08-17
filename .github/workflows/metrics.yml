@@ -11,6 +11,27 @@ concurrency:
   group: metrics
   cancel-in-progress: true
 
+env:
+  METRICS_EXTRAS_CSS: |
+    :root {
+      --color-calendar-graph-day-bg: #1a0b2e;
+      --color-background: #1a0b2e;
+      --color-border: transparent;
+      --color-calendar-graph-day-L1-bg: #c084fc;
+      --color-calendar-graph-day-L2-bg: #d8b4fe;
+      --color-calendar-graph-day-L3-bg: #a855f7;
+      --color-calendar-graph-day-L4-bg: #8b5cf6;
+      --color-header-text: #a855f7;
+      --color-text-primary: #d8b4fe;
+      --color-text-secondary: #c084fc;
+      --color-icon-primary: #c084fc;
+    }
+    .border { stroke: transparent !important; }
+    h2, h3, h4, h5, h6 { color: #a855f7 !important; }
+    text { fill: #d8b4fe !important; }
+    svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
+    .icon { fill: #c084fc !important; }
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -42,25 +63,7 @@ jobs:
           # It's better to stick to a built-in theme like 'dark' and inject some CSS if we can.
           # lowlighter/metrics doesn't directly map exactly the Vercel ones without custom css, but we can set basic styles.
           # We'll use custom CSS to enforce the colors.
-          extras_css: |
-            :root {
-              --color-calendar-graph-day-bg: #1a0b2e;
-              --color-background: #1a0b2e;
-              --color-border: transparent;
-              --color-calendar-graph-day-L1-bg: #c084fc;
-              --color-calendar-graph-day-L2-bg: #d8b4fe;
-              --color-calendar-graph-day-L3-bg: #a855f7;
-              --color-calendar-graph-day-L4-bg: #8b5cf6;
-              --color-header-text: #a855f7;
-              --color-text-primary: #d8b4fe;
-              --color-text-secondary: #c084fc;
-              --color-icon-primary: #c084fc;
-            }
-            .border { stroke: transparent !important; }
-            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
-            text { fill: #d8b4fe !important; }
-            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
-            .icon { fill: #c084fc !important; }
+          extras_css: ${{ env.METRICS_EXTRAS_CSS }}
 
       - name: General Stats and Calendar
         uses: lowlighter/metrics@v3.34
@@ -74,25 +77,7 @@ jobs:
           config_order: base.header, isocalendar, base.activity, base.community, base.repositories, base.metadata
           use_prebuilt_image: yes
           output_action: none
-          extras_css: |
-            :root {
-              --color-calendar-graph-day-bg: #1a0b2e;
-              --color-background: #1a0b2e;
-              --color-border: transparent;
-              --color-calendar-graph-day-L1-bg: #c084fc;
-              --color-calendar-graph-day-L2-bg: #d8b4fe;
-              --color-calendar-graph-day-L3-bg: #a855f7;
-              --color-calendar-graph-day-L4-bg: #8b5cf6;
-              --color-header-text: #a855f7;
-              --color-text-primary: #d8b4fe;
-              --color-text-secondary: #c084fc;
-              --color-icon-primary: #c084fc;
-            }
-            .border { stroke: transparent !important; }
-            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
-            text { fill: #d8b4fe !important; }
-            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
-            .icon { fill: #c084fc !important; }
+          extras_css: ${{ env.METRICS_EXTRAS_CSS }}
 
       - name: Habits and Streak
         uses: lowlighter/metrics@v3.34
@@ -109,25 +94,7 @@ jobs:
           config_order: habits
           use_prebuilt_image: yes
           output_action: none
-          extras_css: |
-            :root {
-              --color-calendar-graph-day-bg: #1a0b2e;
-              --color-background: #1a0b2e;
-              --color-border: transparent;
-              --color-calendar-graph-day-L1-bg: #c084fc;
-              --color-calendar-graph-day-L2-bg: #d8b4fe;
-              --color-calendar-graph-day-L3-bg: #a855f7;
-              --color-calendar-graph-day-L4-bg: #8b5cf6;
-              --color-header-text: #a855f7;
-              --color-text-primary: #d8b4fe;
-              --color-text-secondary: #c084fc;
-              --color-icon-primary: #c084fc;
-            }
-            .border { stroke: transparent !important; }
-            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
-            text { fill: #d8b4fe !important; }
-            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
-            .icon { fill: #c084fc !important; }
+          extras_css: ${{ env.METRICS_EXTRAS_CSS }}
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
