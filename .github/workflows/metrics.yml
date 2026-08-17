@@ -7,6 +7,10 @@ on:
   # (optional) Run workflow when pushing on master/main
   push: {branches: ["master", "main"]}
 
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
@@ -14,7 +18,7 @@ jobs:
       contents: write
     steps:
       - name: Top Languages
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           filename: assets/github-metrics-languages.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -27,9 +31,7 @@ jobs:
           # Custom colors to match the user's retro/RPG theme
           config_padding: 0
           use_prebuilt_image: yes
-          output_action: commit
-          committer_message: "chore: update metrics"
-          setup_dependencies: true
+          output_action: none
           # Styling
           config_animations: yes
           theme: "dark"
@@ -60,7 +62,7 @@ jobs:
             .icon { fill: #c084fc !important; }
 
       - name: General Stats and Calendar
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           filename: assets/github-metrics-stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -70,9 +72,7 @@ jobs:
           config_timezone: Europe/London
           config_order: base.header, isocalendar, base.activity, base.community, base.repositories, base.metadata
           use_prebuilt_image: yes
-          output_action: commit
-          committer_message: "chore: update metrics"
-          setup_dependencies: true
+          output_action: none
           theme: "dark"
           extras_css: |
             :root {
@@ -95,7 +95,7 @@ jobs:
             .icon { fill: #c084fc !important; }
 
       - name: Habits and Streak
-        uses: lowlighter/metrics@latest
+        uses: lowlighter/metrics@v3.34
         with:
           filename: assets/github-metrics-habits.svg
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -108,9 +108,7 @@ jobs:
           config_timezone: Europe/London
           config_order: habits
           use_prebuilt_image: yes
-          output_action: commit
-          committer_message: "chore: update metrics"
-          setup_dependencies: true
+          output_action: none
           theme: "dark"
           extras_css: |
             :root {
@@ -131,3 +129,9 @@ jobs:
             text { fill: #d8b4fe !important; }
             svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
             .icon { fill: #c084fc !important; }
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update metrics [skip ci]"
+          file_pattern: "assets/github-metrics-*.svg"
