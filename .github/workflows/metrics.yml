@@ -1,0 +1,136 @@
+name: Metrics
+on:
+  # Schedule daily updates
+  schedule: [{cron: "0 0 * * *"}]
+  # (optional) Run workflow manually
+  workflow_dispatch:
+  # (optional) Run workflow when pushing on master/main
+  push: {branches: ["master", "main"]}
+
+concurrency:
+  group: metrics
+  cancel-in-progress: true
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Top Languages
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: assets/github-metrics-languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_languages: yes
+          plugin_languages_details: bytes-size, percentage
+          plugin_languages_limit: 8
+          config_timezone: Europe/London
+          config_order: languages
+          # Custom colors to match the user's retro/RPG theme
+          config_padding: 0
+          use_prebuilt_image: yes
+          output_action: none
+          # Styling
+          config_animations: yes
+          plugin_languages_colors: "0:#8b5cf6, 1:#a855f7, 2:#d8b4fe, 3:#c084fc, 4:#6d28d9, 5:#4c1d95"
+          # Overriding theme variables directly if possible, or using CSS
+          # Actually, metrics supports setting `custom_title_color` etc, but `metrics` styling is typically best done by passing a `config_display` and using custom inline CSS or theme variations.
+          # It's better to stick to a built-in theme like 'dark' and inject some CSS if we can.
+          # lowlighter/metrics doesn't directly map exactly the Vercel ones without custom css, but we can set basic styles.
+          # We'll use custom CSS to enforce the colors.
+          extras_css: |
+            :root {
+              --color-calendar-graph-day-bg: #1a0b2e;
+              --color-background: #1a0b2e;
+              --color-border: transparent;
+              --color-calendar-graph-day-L1-bg: #c084fc;
+              --color-calendar-graph-day-L2-bg: #d8b4fe;
+              --color-calendar-graph-day-L3-bg: #a855f7;
+              --color-calendar-graph-day-L4-bg: #8b5cf6;
+              --color-header-text: #a855f7;
+              --color-text-primary: #d8b4fe;
+              --color-text-secondary: #c084fc;
+              --color-icon-primary: #c084fc;
+            }
+            .border { stroke: transparent !important; }
+            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
+            text { fill: #d8b4fe !important; }
+            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
+            .icon { fill: #c084fc !important; }
+
+      - name: General Stats and Calendar
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: assets/github-metrics-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: header, activity, community, repositories, metadata
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+          config_timezone: Europe/London
+          config_order: base.header, isocalendar, base.activity, base.community, base.repositories, base.metadata
+          use_prebuilt_image: yes
+          output_action: none
+          extras_css: |
+            :root {
+              --color-calendar-graph-day-bg: #1a0b2e;
+              --color-background: #1a0b2e;
+              --color-border: transparent;
+              --color-calendar-graph-day-L1-bg: #c084fc;
+              --color-calendar-graph-day-L2-bg: #d8b4fe;
+              --color-calendar-graph-day-L3-bg: #a855f7;
+              --color-calendar-graph-day-L4-bg: #8b5cf6;
+              --color-header-text: #a855f7;
+              --color-text-primary: #d8b4fe;
+              --color-text-secondary: #c084fc;
+              --color-icon-primary: #c084fc;
+            }
+            .border { stroke: transparent !important; }
+            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
+            text { fill: #d8b4fe !important; }
+            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
+            .icon { fill: #c084fc !important; }
+
+      - name: Habits and Streak
+        uses: lowlighter/metrics@v3.34
+        with:
+          filename: assets/github-metrics-habits.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          config_timezone: Europe/London
+          config_order: habits
+          use_prebuilt_image: yes
+          output_action: none
+          extras_css: |
+            :root {
+              --color-calendar-graph-day-bg: #1a0b2e;
+              --color-background: #1a0b2e;
+              --color-border: transparent;
+              --color-calendar-graph-day-L1-bg: #c084fc;
+              --color-calendar-graph-day-L2-bg: #d8b4fe;
+              --color-calendar-graph-day-L3-bg: #a855f7;
+              --color-calendar-graph-day-L4-bg: #8b5cf6;
+              --color-header-text: #a855f7;
+              --color-text-primary: #d8b4fe;
+              --color-text-secondary: #c084fc;
+              --color-icon-primary: #c084fc;
+            }
+            .border { stroke: transparent !important; }
+            h2, h3, h4, h5, h6 { color: #a855f7 !important; }
+            text { fill: #d8b4fe !important; }
+            svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
+            .icon { fill: #c084fc !important; }
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update metrics [skip ci]"
+          file_pattern: "assets/github-metrics-*.svg"
