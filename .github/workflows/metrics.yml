@@ -55,6 +55,7 @@ jobs:
           config_padding: 0
           use_prebuilt_image: yes
           output_action: commit
+          committer_message: "chore: update metrics [skip ci]"
           # Styling
           config_animations: yes
           plugin_languages_colors: "0:#8b5cf6, 1:#a855f7, 2:#d8b4fe, 3:#c084fc, 4:#6d28d9, 5:#4c1d95"
