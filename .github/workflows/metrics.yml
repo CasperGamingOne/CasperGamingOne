@@ -54,7 +54,7 @@ jobs:
           # Custom colors to match the user's retro/RPG theme
           config_padding: 0
           use_prebuilt_image: yes
-          output_action: none
+          output_action: commit
           # Styling
           config_animations: yes
           plugin_languages_colors: "0:#8b5cf6, 1:#a855f7, 2:#d8b4fe, 3:#c084fc, 4:#6d28d9, 5:#4c1d95"
@@ -76,7 +76,7 @@ jobs:
           config_timezone: Europe/London
           config_order: base.header, isocalendar, base.activity, base.community, base.repositories, base.metadata
           use_prebuilt_image: yes
-          output_action: none
+          output_action: commit
           extras_css: ${{ env.METRICS_EXTRAS_CSS }}
 
       - name: Habits and Streak
@@ -93,11 +93,6 @@ jobs:
           config_timezone: Europe/London
           config_order: habits
           use_prebuilt_image: yes
-          output_action: none
+          output_action: commit
           extras_css: ${{ env.METRICS_EXTRAS_CSS }}
 
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@b863ae1933cb653a53c021fe36dbb774e1fb9403 # v5
-        with:
-          commit_message: "chore: update metrics [skip ci]"
-          file_pattern: "assets/github-metrics-*.svg"
