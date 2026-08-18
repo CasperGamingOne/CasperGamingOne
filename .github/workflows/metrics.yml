@@ -44,7 +44,7 @@ jobs:
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
         with:
           filename: assets/github-metrics-languages.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_languages: yes
@@ -76,7 +76,7 @@ jobs:
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
         with:
           filename: assets/github-metrics-stats.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           plugin_isocalendar: yes
@@ -102,11 +102,11 @@ jobs:
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
         with:
           filename: assets/github-metrics-habits.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_habits: yes
-          plugin_habits_from: 200
+          plugin_habits_from: 1000
           plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
