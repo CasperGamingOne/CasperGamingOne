@@ -56,9 +56,6 @@
   <img src="assets/github-metrics-languages.svg" alt="Top Languages" />
   <br/>
   <br/>
-  <img src="assets/github-metrics-habits.svg" alt="CasperGamingOne's Habits & Streak" />
-  <br/>
-  <br/>
   <img src="assets/github-metrics-stats.svg" alt="General Stats and Commit Calendar" />
 </div>
 
