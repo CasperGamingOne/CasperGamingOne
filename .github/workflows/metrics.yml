@@ -44,7 +44,7 @@ jobs:
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
         with:
           filename: assets/github-metrics-languages.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_languages: yes
@@ -76,7 +76,7 @@ jobs:
         uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
         with:
           filename: assets/github-metrics-stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           plugin_isocalendar: yes
@@ -90,31 +90,3 @@ jobs:
           retries_output_action: 3
           retries_delay_output_action: 300
 
-  github-metrics-habits:
-    runs-on: ubuntu-latest
-    needs: github-metrics-stats
-    permissions:
-      contents: write
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - name: Habits and Streak
-        uses: lowlighter/metrics@366f8b9dfe3a59656c67d5dcad9950f59c9bc96d # master
-        with:
-          filename: assets/github-metrics-habits.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
-          committer_token: ${{ secrets.METRICS_TOKEN }}
-          base: ""
-          plugin_habits: yes
-          plugin_habits_from: 1000
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          config_timezone: Europe/London
-          config_order: habits
-          use_prebuilt_image: yes
-          output_action: commit
-          committer_message: "chore: update metrics [skip ci]"
-          extras_css: ${{ env.METRICS_EXTRAS_CSS }}
-          retries_output_action: 3
-          retries_delay_output_action: 300
