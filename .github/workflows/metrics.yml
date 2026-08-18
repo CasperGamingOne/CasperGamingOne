@@ -87,8 +87,8 @@ jobs:
           output_action: commit
           committer_message: "chore: update metrics [skip ci]"
           extras_css: ${{ env.METRICS_EXTRAS_CSS }}
-          retries: 3
-          retries_delay: 300
+          retries_output_action: 3
+          retries_delay_output_action: 300
 
   github-metrics-habits:
     runs-on: ubuntu-latest
@@ -116,5 +116,5 @@ jobs:
           output_action: commit
           committer_message: "chore: update metrics [skip ci]"
           extras_css: ${{ env.METRICS_EXTRAS_CSS }}
-          retries: 3
-          retries_delay: 300
+          retries_output_action: 3
+          retries_delay_output_action: 300
