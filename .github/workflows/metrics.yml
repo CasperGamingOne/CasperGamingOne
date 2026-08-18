@@ -61,8 +61,8 @@ jobs:
           config_animations: yes
           plugin_languages_colors: "0:#8b5cf6, 1:#a855f7, 2:#d8b4fe, 3:#c084fc, 4:#6d28d9, 5:#4c1d95"
           extras_css: ${{ env.METRICS_EXTRAS_CSS }}
-          retries: 3
-          retries_delay: 300
+          retries_output_action: 3
+          retries_delay_output_action: 300
 
   github-metrics-stats:
     runs-on: ubuntu-latest
