@@ -29,7 +29,7 @@ env:
     .border { stroke: transparent !important; }
     h2, h3, h4, h5, h6 { color: #a855f7 !important; }
     text { fill: #d8b4fe !important; }
-    svg { background-color: #1a0b2e !important; border: none !important; border-radius: 4px; }
+
     .icon { fill: #c084fc !important; }
 
 jobs:
@@ -80,7 +80,7 @@ jobs:
           committer_token: ${{ secrets.METRICS_TOKEN }}
           base: header, activity, community, repositories, metadata
           plugin_isocalendar: yes
-          plugin_isocalendar_duration: full-year
+          plugin_isocalendar_duration: half-year
           config_timezone: Europe/London
           config_order: base.header, isocalendar, base.activity, base.community, base.repositories, base.metadata
           use_prebuilt_image: yes
