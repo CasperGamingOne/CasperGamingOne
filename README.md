@@ -44,7 +44,6 @@
 
 ## 🎮 Currently Playing
 
-- 🔫 **CS2** (Counter-Strike 2)
 - 🧙‍♂️ **DOTA 2**
 - 🌲 **Road To Vostok**
 
